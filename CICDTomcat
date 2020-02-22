@@ -1,0 +1,18 @@
+pipeline
+{
+    agent any
+    stages
+    {
+      stage{
+
+           steps
+           {
+             sshagent('[cicdtomcat]')
+              {
+                sh 'scp -o StrictHostKeyChecking=no **/*.war ec2-user@13.229.72.63:/usr/share/tomcat/webappp/'
+              }
+           }
+    }
+    }
+}
+
