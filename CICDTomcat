@@ -3,9 +3,9 @@ pipeline
     agent any
     stages
     {
-      stage
+      stage('deploy to tomcat')
           { 
-            steps('deply to tomcat')
+            steps
             {
              sshagent('cicdtomcat')
               {
