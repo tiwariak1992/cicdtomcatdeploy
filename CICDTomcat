@@ -4,7 +4,8 @@ pipeline
     stages
     {
       stage
-          { steps
+          { 
+            steps()
             {
              sshagent('cicdtomcat')
               {
